@@ -35,46 +35,6 @@
         console.log(`[ClutchBridge] Directing student to Clutch booking app: ${targetUrl}`);
       });
     });
-
-    // Region Filter Tabs
-    const filterTabs = document.querySelectorAll('.region-filter-btn');
-    const cards = document.querySelectorAll('.region-card');
-
-    filterTabs.forEach(tab => {
-      tab.addEventListener('click', function () {
-        const target = this.getAttribute('data-target');
-
-        filterTabs.forEach(t => {
-          t.classList.remove('active', 'bg-gold', 'text-black', 'shadow-lg', 'shadow-gold/20');
-          t.classList.add('bg-white/5', 'text-slate-300', 'hover:bg-white/10', 'border', 'border-white/10');
-        });
-
-        this.classList.add('active', 'bg-gold', 'text-black', 'shadow-lg', 'shadow-gold/20');
-        this.classList.remove('bg-white/5', 'text-slate-300', 'hover:bg-white/10');
-
-        const grid = document.getElementById('regions-grid');
-        if (grid) {
-          if (target === 'all') {
-            grid.classList.remove('md:grid-cols-1', 'max-w-2xl', 'mx-auto');
-            grid.classList.add('md:grid-cols-3');
-          } else {
-            grid.classList.remove('md:grid-cols-3');
-            grid.classList.add('md:grid-cols-1', 'max-w-2xl', 'mx-auto');
-          }
-        }
-
-        cards.forEach(card => {
-          const region = card.getAttribute('data-region');
-          if (target === 'all' || region === target) {
-            card.style.display = 'flex';
-            card.classList.add('animate-fadeIn');
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
     // Mobile Navigation Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
