@@ -1,0 +1,14 @@
+{
+    "targets":  {
+                    "clutch-app-da45e":  {
+                                             "hosting":  {
+                                                             "clutched-web":  [
+                                                                                  "clutched-au"
+                                                                              ]
+                                                         }
+                                         }
+                },
+    "projects":  {
+                     "default":  "clutch-app-da45e"
+                 }
+}

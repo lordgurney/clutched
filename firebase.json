@@ -1,0 +1,18 @@
+{
+    "hosting":  {
+                    "ignore":  [
+                                   "firebase.json",
+                                   "**/.*",
+                                   "**/node_modules/**",
+                                   "README.md"
+                               ],
+                    "public":  ".",
+                    "target":  "clutched-web",
+                    "rewrites":  [
+                                     {
+                                         "destination":  "/index.html",
+                                         "source":  "**"
+                                     }
+                                 ]
+                }
+}
